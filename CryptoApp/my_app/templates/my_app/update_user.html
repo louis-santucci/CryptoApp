@@ -1,0 +1,6 @@
+<h1>Update an existing user</h1>
+<form action="{% url 'my_app:update_user' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Modify changes" />
+</form>

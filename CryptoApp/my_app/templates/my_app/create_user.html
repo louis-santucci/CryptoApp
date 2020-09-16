@@ -1,0 +1,6 @@
+<h1>Create a new user</h1>
+<form action="{% url 'my_app:create_user' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Add user" />
+</form>
