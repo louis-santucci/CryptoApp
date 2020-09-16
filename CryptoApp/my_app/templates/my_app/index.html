@@ -1,0 +1,10 @@
+<h1>Users' list</h1>
+{% if user_list %}
+    <ul>
+        {% for user in user_list %}
+            <li><a href="{% url 'my_app:detail' user.id %}"> {{ user }} </a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p> Hello FUCKERS no users </p>
+{% endif %}
